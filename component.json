@@ -1,0 +1,353 @@
+{
+    "title": "Remote Settings",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/mozilla.com/kinto/1.21/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://firefox.settings.services.mozilla.com/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "server_info": {
+            "main": "./lib/actions/server_info.js",
+            "title": "server_info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/server_info.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_openapi_spec": {
+            "main": "./lib/actions/get_openapi_spec.js",
+            "title": "get_openapi_spec",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_openapi_spec.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action___heartbeat__": {
+            "main": "./lib/actions/action___heartbeat__.js",
+            "title": "action___heartbeat__",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action___heartbeat__.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action___lbheartbeat__": {
+            "main": "./lib/actions/action___lbheartbeat__.js",
+            "title": "action___lbheartbeat__",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action___lbheartbeat__.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_user_datas": {
+            "main": "./lib/actions/get_user_datas.js",
+            "title": "get_user_datas",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_user_datas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "action___version__": {
+            "main": "./lib/actions/action___version__.js",
+            "title": "action___version__",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/action___version__.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "batch": {
+            "main": "./lib/actions/batch.js",
+            "title": "batch",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/batch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_buckets": {
+            "main": "./lib/actions/get_buckets.js",
+            "title": "get_buckets",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_buckets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_changess": {
+            "main": "./lib/actions/get_changess.js",
+            "title": "get_changess",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_changess.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_collections": {
+            "main": "./lib/actions/get_collections.js",
+            "title": "get_collections",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_collections.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_records": {
+            "main": "./lib/actions/get_records.js",
+            "title": "get_records",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_records.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_record": {
+            "main": "./lib/actions/get_record.js",
+            "title": "get_record",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_record.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_attachment": {
+            "main": "./lib/actions/delete_attachment.js",
+            "title": "delete_attachment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_attachment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "create_attachment": {
+            "main": "./lib/actions/create_attachment.js",
+            "title": "create_attachment",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/create_attachment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_collection": {
+            "main": "./lib/actions/get_collection.js",
+            "title": "get_collection",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_collection.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_groups": {
+            "main": "./lib/actions/get_groups.js",
+            "title": "get_groups",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_groups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_group": {
+            "main": "./lib/actions/get_group.js",
+            "title": "get_group",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_group.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bucket": {
+            "main": "./lib/actions/get_bucket.js",
+            "title": "get_bucket",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bucket.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "contribute": {
+            "main": "./lib/actions/contribute.js",
+            "title": "contribute",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/contribute.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_blocklist": {
+            "main": "./lib/actions/get_blocklist.js",
+            "title": "get_blocklist",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_blocklist.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

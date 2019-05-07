@@ -1,0 +1,88 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "defaults": {
+                    "properties": {
+                        "body": {
+                            "additionalProperties": {},
+                            "title": "Body",
+                            "type": "object"
+                        },
+                        "headers": {
+                            "additionalProperties": {},
+                            "title": "Headers",
+                            "type": "object"
+                        },
+                        "method": {
+                            "enum": [
+                                "GET",
+                                "HEAD",
+                                "DELETE",
+                                "TRACE",
+                                "POST",
+                                "PUT",
+                                "PATCH"
+                            ],
+                            "title": "Method",
+                            "type": "string"
+                        },
+                        "path": {
+                            "pattern": "^/",
+                            "title": "Path",
+                            "type": "string"
+                        }
+                    },
+                    "title": "Defaults",
+                    "type": "object"
+                },
+                "requests": {
+                    "items": {
+                        "properties": {
+                            "body": {
+                                "additionalProperties": {},
+                                "title": "Body",
+                                "type": "object"
+                            },
+                            "headers": {
+                                "additionalProperties": {},
+                                "title": "Headers",
+                                "type": "object"
+                            },
+                            "method": {
+                                "enum": [
+                                    "GET",
+                                    "HEAD",
+                                    "DELETE",
+                                    "TRACE",
+                                    "POST",
+                                    "PUT",
+                                    "PATCH"
+                                ],
+                                "title": "Method",
+                                "type": "string"
+                            },
+                            "path": {
+                                "pattern": "^/",
+                                "title": "Path",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "path"
+                        ],
+                        "type": "object"
+                    },
+                    "title": "Requests",
+                    "type": "array"
+                }
+            },
+            "required": [
+                "requests"
+            ],
+            "title": "BatchPayloadSchema",
+            "type": "object"
+        }
+    }
+}

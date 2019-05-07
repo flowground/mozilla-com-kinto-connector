@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "bucket_id": {
+            "required": true,
+            "type": "string"
+        },
+        "collection_id": {
+            "required": true,
+            "type": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

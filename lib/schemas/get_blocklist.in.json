@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "application_ver": {
+            "required": true,
+            "type": "string"
+        },
+        "api_ver__d_": {
+            "required": true,
+            "type": "string"
+        },
+        "metrics___": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
